@@ -1,13 +1,68 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.header::before {
+    content: "";
+    position: absolute;
+    background: #ffffff;
+    width: 610px;
+    height: 95px;
+    border-radius: 0 240px 0 0;
+    top: 0;
+    z-index: -1;
+    box-shadow: 1px -7px 0px 7px #3f8530;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.header {
+    border-bottom: 2px solid #d7ac44;
+    box-shadow: 0px -5px 17px 4px #154C30;
+}
+
+.bgimg{
+    background-image: url('../src/components/Images/marcha_bg.jpg');
+    height: 900px;
+    width: 100%;
+}
+
+.slider_logo{
+    display: flex;
+    width: 404px;
+    height: 393px;
+    border-radius: 430px;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 8px 10px 0px -2px white;
+    border: 9px solid cadetblue;
+}
+
+.section1{
+    border-radius: 0 190px 190px 0;
+}
+
+@keyframes borderAnimation {
+    0% {
+      border-color: transparent;
+      transform: translateX(0);
+    }
+    50% {
+      border-color: gold;
+      transform: translateX(10px);
+    }
+    100% {
+      border-color: transparent;
+      transform: translateX(0);
+    }
+  }
+  
+  .welcome {
+    text-shadow: 1px 4px 0px #939393;
+}
+span.anmol_text {
+    text-shadow: 4px 1px #939393;
+}
+
+.section_slider_box{
+    box-shadow: -1px 2px 19px;
 }
