@@ -54,7 +54,7 @@ const Home_Aboutus = () => {
               variants={fadeInUp}
             >
               <div>
-                <h1 className='md:text-[40px] font-ubuntu font-bold text-gold leading-[48px]'>
+                <h1 className='md:text-[40px] font-ubuntu font-bold text-gold leading-[48px] text-[25px]'>
                   <span className='text-custome border-b-[1px] border-custome inline-block'>ANNMOL</span> in Sustainable Farming and Nature Products
                 </h1>
 
@@ -69,7 +69,7 @@ const Home_Aboutus = () => {
               </div>
 
               <div className='mt-[25px]'>
-                <h1 className='md:text-[30px] font-ubuntu font-bold text-custome leading-[63px]'>Our Story</h1>
+                <h1 className='md:text-[30px] font-ubuntu font-bold text-custome leading-[63px] text-[27px]'>Our Story</h1>
                 <p className='text-white font-poppins text-[18px] mb-[5px]'>
                   <b className='text-gold'>Founded:</b> 1993
                 </p>
@@ -85,7 +85,7 @@ const Home_Aboutus = () => {
               </div>
 
               <motion.div
-                className='bg-gold absolute lg:right-[-72px] lg:bottom-[-93px] xl:right-[8px] xl:bottom-[16px] since_div bottom-[-123px]'
+                className='bg-gold absolute lg:right-[-72px] lg:bottom-[-93px] xl:right-[8px] xl:bottom-[16px] since_div bottom-[-123px] right-0'
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}  
@@ -100,7 +100,7 @@ const Home_Aboutus = () => {
               className='md:w-[50%] bg-[#ffffff24] border-[2px] border-white p-[20px] scale-[0.9]'
               variants={fadeInUp}
             >
-              <h1 className='md:text-[45px] font-ubuntu font-bold text-custome leading-[63px]'>Our Products</h1>
+              <h1 className='md:text-[45px] font-ubuntu font-bold text-custome leading-[63px] text-[27px]'>Our Products</h1>
               <p className='text-white font-poppins text-[18px] my-[10px]'>
                 We take pride in offering a diverse range of high-quality natural products, including:
               </p>
@@ -128,7 +128,7 @@ const Home_Aboutus = () => {
                 Our commitment to quality ensures that each product meets the highest standards, providing our customers with the best nature has to offer.
               </p>
               <div className='mt-[10px]'>
-                <h1 className='md:text-[30px] font-ubuntu font-bold text-custome leading-[63px]'>Our Vision</h1>
+                <h1 className='md:text-[30px] font-ubuntu font-bold text-custome leading-[63px] text-[25px]'>Our Vision</h1>
                 <p className='text-white font-poppins text-[18px]'>
                   Our vision is to lead the way in sustainable farming and to continue expanding our portfolio of nature products. We aim to promote health and well-being through our organic offerings, supporting both our customers and the environment.
                 </p>

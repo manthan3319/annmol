@@ -103,10 +103,8 @@ span.anmol_text {
   .slider_logo {
     width: 404px;
     height: 313px;
+  }
 }
-}
-
-
 
 @media only screen and (max-width: 639px) {
   .slider_logo {

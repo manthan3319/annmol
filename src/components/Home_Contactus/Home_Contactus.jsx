@@ -6,7 +6,7 @@ const Home_Contactus = () => {
     const location = useLocation();
   const iscontactus = location.pathname === '/contactus';
     return (
-        <div className={`py-[50px] ${iscontactus ? "py-[100px]" :""}`}>
+        <div className={` ${iscontactus ? "py-[100px]" :""}`}>
             <div className='lg:max-w-[1440px] m-auto px-[20px]'>
                 <div>
                     <div className='text-center'>
@@ -37,7 +37,7 @@ const Home_Contactus = () => {
                     </div>
 
                     <div className='mt-[50px] bg-[#d7ac442b] p-[40px] rounded-[15px]'>
-                        <div className='flex flex-col gap-[35px] md:flex-row'>
+                        <div className='flex flex-col md:gap-[35px] md:flex-row'>
                             <input 
                                 type="text" 
                                 placeholder='Name' 
@@ -53,7 +53,7 @@ const Home_Contactus = () => {
                             />
                         </div>
 
-                        <div className='flex flex-col gap-[35px] md:flex-row'>
+                        <div className='flex flex-col md:gap-[35px] md:flex-row'>
                             <input 
                                 type="number" 
                                 placeholder='Number' 

@@ -3,19 +3,25 @@ import { motion } from 'framer-motion';
 import { Title } from '../Function/Function';
 import { gallery1, gallery10, gallery2, gallery3, gallery4, gallery5, gallery6, gallery7, gallery8, gallery9, grasstector } from '../Images/Images';
 import { useLocation } from 'react-router-dom';
+import { useInView } from 'react-intersection-observer';
 
 const images = [
-  gallery1, gallery2, gallery3, gallery4, gallery5,
-  gallery6, gallery7, gallery8, gallery9, gallery10
+    gallery1, gallery2, gallery3, gallery4, gallery5,
+    gallery6, gallery7, gallery8, gallery9, gallery10
 ];
 
 const Home_Gallery = () => {
+    const { ref, inView } = useInView({
+        triggerOnce: true, 
+        threshold: 0.2, 
+    });
+
     const containerVariant = {
         hidden: { opacity: 1 },
         visible: {
             opacity: 1,
             transition: {
-                staggerChildren: 0.2 // Adjust this value for the time between each image appearance
+                staggerChildren: 0.2 
             }
         }
     };
@@ -26,10 +32,10 @@ const Home_Gallery = () => {
     };
 
     const location = useLocation();
-  const isgallery = location.pathname === '/gallery';
+    const isgallery = location.pathname === '/gallery';
 
     return (
-        <div className={`bg-green py-[50px] relative ${isgallery ?"py-[100px]":""}`}>
+        <div className={`bg-green relative ${isgallery ? "py-[100px]" : "py-[50px]"}`} ref={ref}>
             <div className='lg:max-w-[1440px] m-auto px-[20px]'>
                 <div className='text-center'>
                     <Title name="Gallery" />
@@ -38,7 +44,7 @@ const Home_Gallery = () => {
                 <motion.div
                     className='flex flex-wrap justify-center gap-[20px] mt-[40px]'
                     initial="hidden"
-                    animate="visible"
+                    animate={inView ? "visible" : "hidden"}
                     variants={containerVariant}
                 >
                     {images.map((image, index) => (
