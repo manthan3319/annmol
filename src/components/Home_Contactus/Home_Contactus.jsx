@@ -1,16 +1,19 @@
 import React from 'react';
 import { Title } from '../Function/Function';
+import { useLocation } from 'react-router-dom';
 
 const Home_Contactus = () => {
+    const location = useLocation();
+  const iscontactus = location.pathname === '/contactus';
     return (
-        <div className=' py-[50px]'>
+        <div className={`py-[50px] ${iscontactus ? "py-[100px]" :""}`}>
             <div className='lg:max-w-[1440px] m-auto px-[20px]'>
                 <div>
                     <div className='text-center'>
                         <Title name="Contact Us" color="#74C264" />
                     </div>
 
-                    <div className='flex justify-between flex-wrap mt-[50px]'>
+                    <div className='flex md:justify-between flex-wrap mt-[50px] items-center justify-center gap-[15px]'>
                         <div className='items-center flex flex-col bg-green p-[20px] rounded-[15px] w-[300px] h-[150px] overflow-hidden'>
                             <p className='text-[30px] mb-[10px] text-gold'><i className="fa fa-phone" aria-hidden="true"></i></p>
                             <p className='font-ubuntu text-[20px] text-white'>+91 7043253295</p>

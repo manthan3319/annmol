@@ -21,6 +21,9 @@ import gallery7 from "../Images/gallery7.jpg";
 import gallery8 from "../Images/gallery8.webp";
 import gallery9 from "../Images/gallery9.jpg";
 import gallery10 from "../Images/gallery10.jpg";
+import tector from "../Images/tector.png";
+import grasstector from "../Images/grasstector.png";
+import menu from "../Images/menu.png";
 export {
     logo,
     logo2,
@@ -45,4 +48,7 @@ export {
     gallery8,
     gallery9,
     gallery10,
+    tector,
+    grasstector,
+    menu
 }

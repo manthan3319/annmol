@@ -5,7 +5,7 @@ export const Title = ({ name, color }) => {
 
   return (
     <h1
-      className={`xl:text-[50px] font-ubuntu font-semibold inline-block border-b-[1px]`}
+      className={`xl:text-[50px] font-ubuntu font-semibold inline-block border-b-[1px] text-[34px]`}
       style={{ color: titleColor, borderBottomColor: titleColor }}
     >
       {name}
