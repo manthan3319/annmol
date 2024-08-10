@@ -12,3 +12,13 @@ export const Title = ({ name, color }) => {
     </h1>
   );
 };
+
+
+export const Whatsapp =()=> {
+  return (
+    <div className='flex flex-col items-center justify-center fixed bottom-[10px] right-[15px]'>
+                <div className='contact_icon '><i class="fa fa-whatsapp" aria-hidden="true"></i></div>
+                <p className='text-center text-white contact_on'>Connect on <br></br> Whatsapp</p>
+            </div>
+  );
+};

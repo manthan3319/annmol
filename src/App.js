@@ -7,6 +7,8 @@ import Home_Aboutus from "./components/Home_Aboutus/Home_Aboutus";
 import Product from "./components/Product/Product";
 import Gallery from "./components/Gallery/Gallery";
 import Contactus from "./components/Contactus/Contactus";
+import Product_View from "./components/Product_View/Product_View";
+import { Whatsapp } from "./components/Function/Function";
 
 const App = () => {
   return (
@@ -18,7 +20,9 @@ const App = () => {
         <Route path="/product" element={<Product/>} />
         <Route path="/gallery" element={<Gallery/>} />
         <Route path="/contactus" element={<Contactus/>} />
+        <Route path="/product/:id" element={<Product_View />} />
       </Routes>
+      <Whatsapp/>
       <Footer/>
     </BrowserRouter>
   );

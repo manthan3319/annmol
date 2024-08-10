@@ -1,48 +1,22 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Chanapng, chanapng2, desi_chana, Moong, peanuts, Sesame, Tuver, wheat } from '../Images/Images';
+import { useNavigate } from 'react-router-dom';
+import { Chanapng, chanapng2 } from '../Images/Images';
 import { Title } from '../Function/Function';
-import { useLocation } from 'react-router-dom';
-
-const products = [
-  {
-    id: 1,
-    name: 'Tuver-Pigeon pea',
-    image: Tuver,
-  },
-  {
-    id: 2,
-    name: 'Wheat',
-    image: wheat,
-  },
-  {
-    id: 3,
-    name: 'Green Moong',
-    image: Moong,
-  },
-  {
-    id: 4,
-    name: 'Organic Sesame Seeds',
-    image: Sesame,
-  },
-  {
-    id: 5,
-    name: 'Desi Chana / Bengal Gram',
-    image: desi_chana,
-  },
-  {
-    id: 6,
-    name: 'Whole Peanuts',
-    image: peanuts,
-  },
-];
+import { products } from '../Data/Data';
 
 const Home_Products = () => {
   const { ref, inView } = useInView({
     triggerOnce: true,
-    threshold: 0.1, // Lowered the threshold to trigger earlier on mobile
+    threshold: 0.1,
   });
+
+  const navigate = useNavigate();
+
+  const handleProductClick = (product) => {
+    navigate(`/product/${product.id}`, { state: { product } }); // Pass the product object in state
+  };
 
   const fadeInUpVariants = {
     hidden: { opacity: 0, y: 50 },
@@ -56,11 +30,8 @@ const Home_Products = () => {
     },
   };
 
-  const location = useLocation();
-  const isproduct = location.pathname === '/product';
-
   return (
-    <div ref={ref} className={`bg-green xl:py-[50px] relative overflow-hidden py-[80px] ${isproduct ? "pt-[100px]" : ""}`}>
+    <div ref={ref} className="bg-green xl:py-[50px] relative overflow-hidden py-[80px]">
       <div className='lg:max-w-[1440px] m-auto px-[20px]'>
         <div className='text-center'>
           <Title name="Products" />
@@ -75,14 +46,15 @@ const Home_Products = () => {
           {products.map((product) => (
             <motion.div
               key={product.id}
-              className='w-[48%] sm:w-[45%] md:w-[30%] xl:w-[20%] flex flex-col product rounded-[10px] z-[99]'
+              className='w-[48%] sm:w-[45%] md:w-[30%] xl:w-[20%] flex flex-col product rounded-[10px] z-[99] cursor-pointer hover:scale-105 hover:shadow-lg transition-transform duration-300'
               variants={fadeInUpVariants}
+              onClick={() => handleProductClick(product)}
             >
-              <div className='h-[200px] sm:h-[250px] md:h-[330px] overflow-hidden'> 
+              <div className='h-[200px] sm:h-[250px] md:h-[330px] overflow-hidden'>
                 <img src={product.image} className='w-[100%] h-[100%] object-cover rounded-t-[10px]' alt={product.name} />
               </div>
               <div className='text-center border-t-[5px] border-gol flex-grow flex items-center justify-center p-[10px]'>
-                <h1 className='text-white font-poppins text-[16px] sm:text-[18px] md:text-[20px] font-medium truncate'>{product.name}</h1> 
+                <h1 className='text-white font-poppins text-[16px] sm:text-[18px] md:text-[20px] font-medium truncate'>{product.name}</h1>
               </div>
             </motion.div>
           ))}
