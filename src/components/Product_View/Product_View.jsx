@@ -89,8 +89,8 @@ const Product_View = () => {
               </ul>
             )}
 
-            <button className="bg-white text-green font-bold py-[10px] px-[20px] rounded-[5px] hover:bg-gray-200">
-              Add to Cart
+            <button className="bg-white text-green text-[20px] font-bold py-[10px] px-[20px] rounded-[5px] hover:bg-gray-200 flex items-center gap-[15px]">
+              Order On <div className='contact_icon2 '><i class="fa fa-whatsapp" aria-hidden="true"></i></div>
             </button>
           </div>
         </div>
