@@ -19,7 +19,7 @@ const Home_Aboutus = () => {
         height: "100%",
         width: "100%",
         backgroundRepeat: "no-repeat",
-        backgroundSize: 'cover',  // Changed to cover to better handle mobile screens
+        backgroundSize: 'cover',  
         position: 'absolute',
         top: 0,
         left: 0,
@@ -45,7 +45,7 @@ const Home_Aboutus = () => {
       >
         <div className='flex flex-col' style={{ height: "100%" }}>
           <div className='text-center'>
-            <Title name="About Us" />
+            <Title name="Company Profile" />
           </div>
 
           <div className='flex md:flex-row flex-col md:gap-[50px] md:mt-[50px] mt-[50px] gap-[25px]'>
@@ -55,7 +55,7 @@ const Home_Aboutus = () => {
             >
               <div>
                 <h1 className='md:text-[40px] font-ubuntu font-bold text-gold leading-[48px] text-[25px]'>
-                  <span className='text-custome border-b-[1px] border-custome inline-block'>ANNMOL</span> in Sustainable Farming and Nature Products
+                  <span className='text-custome border-b-[1px] border-custome inline-block'>Raj Agrifoods</span> in Sustainable Farming and Nature Products
                 </h1>
 
                 <div className='mt-[25px]'>

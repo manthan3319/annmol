@@ -19,7 +19,7 @@ const Navbar = () => {
     ];
 
     const handleLinkClick = () => {
-        toggleDrawer(); // Close the drawer when a link is clicked
+        toggleDrawer(); 
     };
 
     return (
@@ -60,13 +60,13 @@ const Navbar = () => {
             </div>
 
             <div className='md:hidden block'>
-                <div className='flex justify-between items-center px-[20px] fixed z-[999] w-[100%] bg-white'>
+                <div className='flex justify-between items-center px-[20px] fixed z-[999] w-[100%] bg-[#154c30] py-[10px]'>
                     <div>
-                        <Link to="/"><img src={logo2} alt='logo' className='xl:w-[114px] w-[150px]' /></Link>
+                        <Link to="/"><img src={logo2} alt='logo' className='xl:w-[114px] w-[125px]' /></Link>
                     </div>
                     <div>
                         <button onClick={toggleDrawer}>
-                            <img src={menu} alt='menu' className='w-[46px]' />
+                            <img src={menu} alt='menu' className='w-[46px] img_filter' />
                         </button>
                     </div>
                 </div>
@@ -77,7 +77,7 @@ const Navbar = () => {
                     direction='right'
                     className='bla bla bla z-[99999999999]'
                 >
-                    <ul className='flex flex-col gap-[25px] pb-[30px] px-[20px] pt-[100px]'>
+                    <ul className='flex flex-col gap-[25px] pb-[30px] px-[20px] pt-[150px]'>
                         {NavbarMenu.map((item) => (
                             <li key={item.id}>
                                 <NavLink

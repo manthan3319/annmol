@@ -1,12 +1,15 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate,useLocation } from 'react-router-dom';
 import { Chanapng, chanapng2 } from '../Images/Images';
 import { Title } from '../Function/Function';
 import { products } from '../Data/Data';
 
 const Home_Products = () => {
+  const location = useLocation();
+  const isproduct = location.pathname === '/product';
+
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -31,7 +34,7 @@ const Home_Products = () => {
   };
 
   return (
-    <div ref={ref} className="bg-green xl:py-[50px] relative overflow-hidden py-[80px]">
+    <div ref={ref} className={`bg-green xl:py-[50px] relative overflow-hidden ${isproduct ?"py-[120px]" : "py-[80px]"}`}>
       <div className='lg:max-w-[1440px] m-auto px-[20px]'>
         <div className='text-center'>
           <Title name="Products" />

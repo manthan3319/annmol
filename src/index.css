@@ -2,10 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+.img_filter {
+  filter: invert(1);
+}
+
 .header::before {
   content: "";
   position: absolute;
-  background: #154C30;
+  background: #154c30;
   width: 610px;
   height: 95px;
   border-radius: 0 240px 0 0;
@@ -102,7 +106,7 @@ span.anmol_text {
   align-items: center;
   justify-content: center;
   transform: translateY(0px);
-  animation: pulsing 1.25s infinite cubic-bezier(.66,0,0,1);
+  animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
   font-weight: 400;
   font-family: sans-serif;
   text-decoration: none !important;
@@ -122,7 +126,7 @@ span.anmol_text {
   align-items: center;
   justify-content: center;
   transform: translateY(0px);
-  animation: pulsing 1.25s infinite cubic-bezier(.66,0,0,1);
+  animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
   font-weight: 400;
   font-family: sans-serif;
   text-decoration: none !important;
@@ -143,8 +147,7 @@ span.anmol_text {
   }
 }
 
-
-.contact_on{
+.contact_on {
   text-shadow: 2px 1px 0px black;
 }
 

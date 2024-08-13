@@ -32,7 +32,7 @@ const Product_View = () => {
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
           slidesToScroll: 1,
         }
       }
@@ -64,7 +64,7 @@ const Product_View = () => {
             <img
               src={product.image}
               alt={product.name}
-              className="w-[300px] md:w-[500px] md:min-h-[500px] max-h-[500px] min-h-[330px] object-cover rounded-[10px]"
+              className="w-[300px] md:w-[500px] md:min-h-[500px] max-h-[500px] min-h-[330px] object-cover rounded-[10px] m-auto"
             />
           </div>
           <div className='lg:w-[60%]'>
@@ -108,7 +108,7 @@ const Product_View = () => {
                 <img
                   src={item.image}
                   alt={item.name}
-                  className="w-[350px] min-h-[400px] max-h-[400px] object-cover rounded-[5px] mb-[10px]"
+                  className="w-[350px] sm:min-h-[400px] sm:max-h-[400px] min-h-[190px] object-cover rounded-[5px] mb-[10px]"
                 />
                 <h2 className="text-[18px] font-semibold text-center">{item.name}</h2>
               </motion.div>
