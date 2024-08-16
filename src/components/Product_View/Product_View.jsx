@@ -76,10 +76,10 @@ const Product_View = () => {
               <p className="text-[24px] font-semibold">Price: ₹{product.price}</p>
             )}
 
-            <div className='font-poppins flex gap-[15px] my-[20px] items-center'>
+            {/* <div className='font-poppins flex gap-[15px] my-[20px] items-center'>
               <p className='font-poppins text-[20px]'>Size :</p>
               <p className='font-poppins text-[18px]'>1 Kg</p>
-            </div>
+            </div> */}
 
             {product.fetureFeatures && product.fetureFeatures.length > 0 && (
               <ul className="list-disc list-inside mb-[20px]">
