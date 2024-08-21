@@ -68,29 +68,55 @@ const Product_View = () => {
             />
           </div>
           <div className='lg:w-[60%]'>
-            <h1 className="text-[32px] font-bold  mb-[20px] text-custome">{product.name}</h1>
-
+            <h1 className="text-[32px] font-bold mb-[20px] text-custome">{product.name}</h1>
             <p className="text-[20px] mb-[20px]">{product.description}</p>
 
-            {product.price && (
-              <p className="text-[24px] font-semibold">Price: ₹{product.price}</p>
+            {product.specification && product.specification.length > 0 && (
+              <>
+                <h2 className="text-[24px] font-semibold mb-[10px]">Specification:</h2>
+                <table className="mb-[20px] w-full text-left">
+                  <thead>
+                    <tr>
+                      <th className="border-b-2 border-gray-300 py-[10px]">Parameter</th>
+                      <th className="border-b-2 border-gray-300 py-[10px]">Level</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {product.specification.map((spec, index) => (
+                      <tr key={index}>
+                        <td className="border-b border-gray-300 py-[10px]">{spec.Parameter}</td>
+                        <td className="border-b border-gray-300 py-[10px]">{spec.Level}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </>
             )}
 
-            {/* <div className='font-poppins flex gap-[15px] my-[20px] items-center'>
-              <p className='font-poppins text-[20px]'>Size :</p>
-              <p className='font-poppins text-[18px]'>1 Kg</p>
-            </div> */}
+            {/* Packaging Information */}
+            {product.PackagingInformation && product.PackagingInformation.length > 0 && (
+              <>
+                <h2 className="text-[24px] font-semibold mb-[10px]">Packaging Information:</h2>
+                <ul className="list-disc list-inside mb-[20px]">
+                  {product.PackagingInformation.map((info, index) => (
+                    <li key={index}>{info.detail}</li>
+                  ))}
+                </ul>
+              </>
+            )}
 
-            {product.fetureFeatures && product.fetureFeatures.length > 0 && (
-              <ul className="list-disc list-inside mb-[20px]">
-                {product.fetureFeatures.map((feature, index) => (
-                  <li key={index}>{feature}</li>
+            <div className='mb-[15px]'>
+            <h2 className="text-[24px] font-semibold mb-[10px]">fetureFeatures:</h2>
+              <ul>
+                {product.fetureFeatures.map((info, index) => (
+                  <li key={index}>{info}</li>
                 ))}
               </ul>
-            )}
+            </div>
+
 
             <button className="bg-white text-green text-[20px] font-bold py-[10px] px-[20px] rounded-[5px] hover:bg-gray-200 flex items-center gap-[15px]">
-              Order On <div className='contact_icon2 '><i class="fa fa-whatsapp" aria-hidden="true"></i></div>
+              Order On <div className='contact_icon2 '><i className="fa fa-whatsapp" aria-hidden="true"></i></div>
             </button>
           </div>
         </div>

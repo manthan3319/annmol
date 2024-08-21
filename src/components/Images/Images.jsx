@@ -24,6 +24,9 @@ import gallery10 from "../Images/gallery10.jpg";
 import tector from "../Images/tector.png";
 import grasstector from "../Images/grasstector.png";
 import menu from "../Images/menu.png";
+import wheatbg from "../Images/img_2.jpg";
+import bg2 from "../Images/img_1.jpg";
+import bg3 from "../Images/bg3.jpg";
 export {
     logo,
     logo2,
@@ -50,5 +53,8 @@ export {
     gallery10,
     tector,
     grasstector,
-    menu
+    menu,
+    wheatbg,
+    bg2,
+    bg3
 }

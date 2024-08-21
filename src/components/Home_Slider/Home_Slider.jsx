@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { chana_bg, logo2, marcha_bg, tector } from '../Images/Images';
+import { bg2, bg3, chana_bg, logo2, marcha_bg, tector, wheatbg } from '../Images/Images';
 
 const Home_Slider = () => {
   const sliderSettings = {
@@ -36,27 +36,26 @@ const Home_Slider = () => {
   return (
     <div className="relative">
       {/* Slider */}
-      <Slider {...sliderSettings} className="relative w-full md:h-[680px] h-[750px]">
+      <Slider {...sliderSettings} className="relative w-full md:h-[820px] h-[750px]">
         <div>
-          <img src={marcha_bg} className='w-[100%] md:h-[680px] h-[750px]' alt="Background" />
+          <img src={wheatbg} className='w-[100%] md:h-[820px] h-[750px]' alt="Background" />
         </div>
         <div>
-          <img src={chana_bg} className='w-[100%] md:h-[680px] h-[750px]' alt="Background" />
+          <img src={bg2} className='w-[100%] md:h-[820px] h-[750px]' alt="Background" />
         </div>
         <div>
-          <img src={marcha_bg} className='w-[100%] md:h-[680px] h-[750px]' alt="Background" />
+          <img src={bg3} className='w-[100%] md:h-[820px] h-[750px]' alt="Background" />
         </div>
         <div>
-          <img src={marcha_bg} className='w-[100%] md:h-[680px] h-[750px]' alt="Background" />
+          <img src={marcha_bg} className='w-[100%] md:h-[820px] h-[750px]' alt="Background" />
         </div>
       </Slider>
 
-      {/* Content */}
-      <div className="absolute inset-0 flex flex-col justify-center text-white bg-green bg-opacity-70 px-[20px]">
+      <div className="absolute inset-0 flex flex-col justify-center text-white bg-[#101010b3] bg-opacity-70 px-[20px]">
         <div className="lg:max-w-[1440px] m-auto md:mt-[100px] md:mb-[150px]">
           <motion.div
             ref={headingRef}
-            className="flex flex-col-reverse gap-[25px] sm:gap-0 md:flex-row items-center text-center bg-[#ffffff36] section1 section_slider_box relative md:z-[99999999999]"
+            className="flex  gap-[25px] sm:gap-0 flex-col  items-center text-center relative md:z-[99999999999]"
             variants={fadeInVariants}
             initial="hidden"
             animate={headingInView ? 'visible' : 'hidden'}
@@ -65,16 +64,17 @@ const Home_Slider = () => {
               className="text-container"
               variants={bounceInVariants}
             >
-              <h1 className='lg:text-[80px] text-[54px] md:text-black text-white font-ubuntu font-bold max-w-[520px]'>
-                <span className='welcome'>Welcome To</span> <span className='welcome xl:text-[88px] md:text-black sm:text-white'>ANNMOL</span>
-              </h1>
+              
             </motion.div>
-            <div className='bg-gold slider_logo'>
+            <div className='bg-gold slider_logo mt-[45px]'>
               <img src={logo2} className='md:w-[338px] w-[224px]' alt="Logo" />
             </div>
-            <div>
-              <img src={tector} alt='tector' className='absolute md:block hidden md:right-[120px] right-0 bottom-0 z-[-1] opacity-[0.3] w-[600px] top-[5px]' />
+
+            <div className='sm:mt-[50px]'>
+              <h1 className='sm:text-[60px] font-ubuntu font-bold text-[34px]'>FARMING COMPANY</h1>
+              <p className='sm:text-[23px] font-poppins max-w-[1300px] mt-[15px] text-[20px]'>The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English</p>
             </div>
+            
           </motion.div>
         </div>
       </div>

@@ -7,11 +7,27 @@ export const products = [
         name: 'White Sesame Seeds',
         image: Tuver,
         description: 'Nutritional Facts & Benefits',
-        fetureFeatures: [
-            "Nutritional Facts: White sesame seeds are an excellent source of healthy fats, proteins, and essential minerals such as calcium, iron, and magnesium. They are rich in antioxidants and vitamins, contributing to overall wellness. The seeds have a high oil content, which provides a significant amount of energy and supports various bodily functions.",
-            "Benefits: Incorporating white sesame seeds into your diet can support bone health due to their high calcium content, improve digestion thanks to their fiber content, and promote healthy skin. The antioxidants in sesame seeds help combat oxidative stress, while the healthy fats contribute to cardiovascular health.",
+        specification: [
+          { Parameter: "Admixture", Level: "1% Max (0.05%)" },
+          { Parameter: "Purity", Level: "99% Max (99.95%)" },
+          { Parameter: "Oil content", Level: "48% Min" },
+          { Parameter: "FFA", Level: "2% Max" },
+          { Parameter: "Moisture", Level: "6% Max" },
+          { Parameter: "Salmonella", Level: "Absent/25g" },
+          { Parameter: "Pesticide Residues", Level: "Within EU Regulations" }
         ],
-    },
+        PackagingInformation: [
+          { detail: "Bag Type: Laminated" },
+          { detail: "Bag Weight: 60 Gms" },
+          { detail: "Weight Capacity: Up to 25 Kgs Material" },
+          { detail: "Colour: Natural, White" },
+          { detail: "Labeling: Printing with water based ink" }
+        ],
+        fetureFeatures: [
+          "Nutritional Facts: White sesame seeds are an excellent source of healthy fats, proteins, and essential minerals...",
+          "Benefits: Incorporating white sesame seeds into your diet can support bone health..."
+        ],
+      },
     {
         id: 2,
         name: 'Wheat',
@@ -37,6 +53,22 @@ export const products = [
         name: 'Black Sesame Seeds',
         image: Sesame,
         description: 'Nutritional Facts & Benefits',
+        specification: [
+            { Parameter: "Admixture", Level: "1% Max (0.05%)" },
+            { Parameter: "Purity", Level: "99% Max (99.95%)" },
+            { Parameter: "Oil content", Level: "48% Min" },
+            { Parameter: "FFA", Level: "2% Max" },
+            { Parameter: "Moisture", Level: "6% Max" },
+            { Parameter: "Salmonella", Level: "Absent/25g" },
+            { Parameter: "Pesticide Residues", Level: "Within EU Regulations" }
+          ],
+          PackagingInformation: [
+            { detail: "Bag Type: Laminated" },
+            { detail: "Bag Weight: 60 Gms" },
+            { detail: "Weight Capacity: Up to 25 Kgs Material" },
+            { detail: "Colour: Natural, White" },
+            { detail: "Labeling: Printing with water based ink" }
+          ],
         fetureFeatures: [
             "Nutritional Facts: Black sesame seeds are packed with antioxidants, dietary fiber, and high-quality protein. They are also rich in essential nutrients like calcium, magnesium, and iron. The oil content in black sesame seeds is slightly lower than in white sesame seeds but still provides numerous health benefits.",
             "Benefits: Black sesame seeds are known for their anti-aging properties due to their antioxidant content. They support cardiovascular health, promote hair growth, and improve skin elasticity. Additionally, the seeds aid in digestion and help maintain overall health by providing essential nutrients.",
