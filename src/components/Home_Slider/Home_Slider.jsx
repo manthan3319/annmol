@@ -5,6 +5,7 @@ import { useInView } from 'react-intersection-observer';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { bg2, bg3, chana_bg, logo2, marcha_bg, tector, wheatbg } from '../Images/Images';
+import { Link } from 'react-router-dom';
 
 const Home_Slider = () => {
   const sliderSettings = {
@@ -55,7 +56,7 @@ const Home_Slider = () => {
         <div className="lg:max-w-[1440px] m-auto md:mt-[100px] md:mb-[150px]">
           <motion.div
             ref={headingRef}
-            className="flex  gap-[25px] sm:gap-0 flex-col  items-center text-center relative md:z-[99999999999]"
+            className="flex gap-[25px] sm:gap-0 flex-col items-center text-center relative md:z-[99999999999]"
             variants={fadeInVariants}
             initial="hidden"
             animate={headingInView ? 'visible' : 'hidden'}
@@ -64,17 +65,22 @@ const Home_Slider = () => {
               className="text-container"
               variants={bounceInVariants}
             >
-              
+
             </motion.div>
-            <div className='bg-gold slider_logo mt-[45px]'>
+            {/* <div className='bg-gold slider_logo mt-[45px]'>
               <img src={logo2} className='md:w-[338px] w-[224px]' alt="Logo" />
-            </div>
+            </div> */}
 
             <div className='sm:mt-[50px]'>
-              <h1 className='sm:text-[60px] font-ubuntu font-bold text-[34px]'>FARMING COMPANY</h1>
-              <p className='sm:text-[23px] font-poppins max-w-[1300px] mt-[15px] text-[20px]'>The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English</p>
+              <h1 className='sm:text-[70px] font-ubuntu font-bold text-[50px] text-[#ffd700]'>Sustainable Agriculture</h1>
+              <p className='sm:text-[23px] font-poppins max-w-[1100px] mt-[15px] text-[20px]'>Committed to transforming farming practices, we provide innovative solutions and high-quality products that support sustainable growth and enhance agricultural productivity.</p>
+
+              <div className='flex justify-center mt-[25px] gap-[20px] sm:flex-row flex-row'>
+                <Link to="/product" className='text-[20px] bg-custome text-white px-[20px] py-[15px] rounded-[5px] hover:bg-[#e6c04d] transition duration-300 sm:min-w-[200px] w-[150px]'>Product</Link>
+                <Link to="/contactus" className='text-[20px] bg-custome text-white px-[20px] py-[15px] rounded-[5px] hover:bg-[#e6c04d] transition duration-300 sm:min-w-[200px] w-[150px]'>Contact Us</Link>
+              </div>
             </div>
-            
+
           </motion.div>
         </div>
       </div>

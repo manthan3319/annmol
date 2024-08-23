@@ -14,11 +14,18 @@ export const Title = ({ name, color }) => {
 };
 
 
-export const Whatsapp =()=> {
+export const Whatsapp = () => {
+  const whatsappNumber = "+917043253295";
+  const whatsappURL = `https://wa.me/${whatsappNumber}`;
+
   return (
-    <div className='flex flex-col items-center justify-center fixed bottom-[10px] right-[15px]'>
-                <div className='contact_icon '><i class="fa fa-whatsapp" aria-hidden="true"></i></div>
-                <p className='text-center text-white contact_on'>Connect on <br></br> Whatsapp</p>
-            </div>
+    <a href={whatsappURL} target="_blank" rel="noopener noreferrer" className='flex flex-col items-center justify-center fixed bottom-[10px] right-[15px]'>
+      <div className='contact_icon'>
+        <i className="fa fa-whatsapp" aria-hidden="true"></i>
+      </div>
+      <p className='text-center text-white contact_on'>
+        Connect on <br /> Whatsapp
+      </p>
+    </a>
   );
 };

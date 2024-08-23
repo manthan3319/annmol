@@ -50,7 +50,7 @@
     transform: translateX(0);
   }
   50% {
-    border-color: gold;
+    border-color: #ffd700;
     transform: translateX(10px);
   }
   100% {

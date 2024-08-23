@@ -10,6 +10,8 @@ const Product_View = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const product = location.state?.product;
+  const whatsappNumber = "+917043253295";
+  const whatsappURL = `https://wa.me/${whatsappNumber}`;
 
   if (!product) {
     return <div>Product not found</div>;
@@ -115,9 +117,9 @@ const Product_View = () => {
             </div>
 
 
-            <button className="bg-white text-green text-[20px] font-bold py-[10px] px-[20px] rounded-[5px] hover:bg-gray-200 flex items-center gap-[15px]">
+            <a href={whatsappURL} className="bg-white w-[200px] text-green text-[20px] font-bold py-[10px] px-[20px] rounded-[5px] hover:bg-gray-200 flex items-center gap-[15px]">
               Order On <div className='contact_icon2 '><i className="fa fa-whatsapp" aria-hidden="true"></i></div>
-            </button>
+            </a>
           </div>
         </div>
 
