@@ -56,7 +56,7 @@ const Home_Contactus = () => {
                             variants={fadeInVariants}
                         >
                             <p className='text-[30px] mb-[10px] text-gold'><i className="fa fa-map-marker" aria-hidden="true"></i></p>
-                            <p className='font-ubuntu text-[20px] text-white'>Pune</p>
+                            <p className='font-ubuntu text-[20px] text-white'>vesma,surat</p>
                         </motion.div>
                     </div>
                 </div>
