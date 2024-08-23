@@ -20,8 +20,7 @@ export const products = [
           { detail: "Bag Type: Laminated" },
           { detail: "Bag Weight: 60 Gms" },
           { detail: "Weight Capacity: Up to 25 Kgs Material" },
-          { detail: "Colour: Natural, White" },
-          { detail: "Labeling: Printing with water based ink" }
+          { detail: "Colour: Natural, White" }
         ],
         fetureFeatures: [
           "Nutritional Facts: White sesame seeds are an excellent source of healthy fats, proteins, and essential minerals...",
@@ -66,8 +65,7 @@ export const products = [
             { detail: "Bag Type: Laminated" },
             { detail: "Bag Weight: 60 Gms" },
             { detail: "Weight Capacity: Up to 25 Kgs Material" },
-            { detail: "Colour: Natural, White" },
-            { detail: "Labeling: Printing with water based ink" }
+            { detail: "Colour: Natural, White" }
           ],
         fetureFeatures: [
             "Nutritional Facts: Black sesame seeds are packed with antioxidants, dietary fiber, and high-quality protein. They are also rich in essential nutrients like calcium, magnesium, and iron. The oil content in black sesame seeds is slightly lower than in white sesame seeds but still provides numerous health benefits.",

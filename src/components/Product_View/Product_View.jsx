@@ -72,7 +72,14 @@ const Product_View = () => {
           <div className='lg:w-[60%]'>
             <h1 className="text-[32px] font-bold mb-[20px] text-custome">{product.name}</h1>
             <p className="text-[20px] mb-[20px]">{product.description}</p>
-
+            <div className='mb-[15px]'>
+            <h2 className="text-[24px] font-semibold mb-[10px]">fetureFeatures:</h2>
+              <ul>
+                {product.fetureFeatures.map((info, index) => (
+                  <li key={index}>{info}</li>
+                ))}
+              </ul>
+            </div>
             {product.specification && product.specification.length > 0 && (
               <>
                 <h2 className="text-[24px] font-semibold mb-[10px]">Specification:</h2>
@@ -107,14 +114,7 @@ const Product_View = () => {
               </>
             )}
 
-            <div className='mb-[15px]'>
-            <h2 className="text-[24px] font-semibold mb-[10px]">fetureFeatures:</h2>
-              <ul>
-                {product.fetureFeatures.map((info, index) => (
-                  <li key={index}>{info}</li>
-                ))}
-              </ul>
-            </div>
+           
 
 
             <a href={whatsappURL} className="bg-white w-[200px] text-green text-[20px] font-bold py-[10px] px-[20px] rounded-[5px] hover:bg-gray-200 flex items-center gap-[15px]">

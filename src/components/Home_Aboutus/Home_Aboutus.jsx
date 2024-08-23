@@ -60,7 +60,7 @@ const Home_Aboutus = () => {
 
                 <div className='mt-[25px]'>
                   <p className='text-white text-[18px] font-semibold'>
-                    <span className='font-bold font-poppins text-custome'>It sounds like Dahyabhai Jamnadas, founded in 1993 by Mr. Harishkumar Shah,</span>  is now led by Mr. Nimesh Shah as the chairperson and Mr. Tushar Shah as a partner. Both bring their own expertise to the company. Dahyabhai Jamnadas and Raj Agrifoods are sister concerns, suggesting they are related or affiliated companies working in similar or complementary fields.
+                    <span className='font-bold font-poppins text-custome'>Dahyabhai Jamnadas and Raj Agrifoods are sister concerns, suggesting they are related or affiliated companies working in similar or complementary fields,</span>  It sounds like Dahyabhai Jamnadas, founded in 1993 by Mr. Harishkumar Shah, is now led by Mr. Nimesh Shah as the chairperson and Mr. Tushar Shah as a partner. Both bring their own expertise to the company.
                   </p>
                   <p className='mt-[15px] text-white text-[18px] font-semibold'>
                   Dahyabhai Jamnadas is a prominent name in the agri-commodities sector in Surat District, known for its commitment to quality. Each year, around 3,000 farmers from local villages sell their raw materials to the company, where they receive competitive prices. To further enhance their offerings, Dahyabhai Jamnadas has invested in sortex machinery, which ensures that grains are cleaned to the highest standards, providing top-quality, chemical-free material at affordable prices.
@@ -80,7 +80,7 @@ const Home_Aboutus = () => {
                   <b className='text-gold'>Current Chairperson:</b> Mr. Nimesh Shah 
                 </p>
                 <p className='text-white font-poppins text-[18px] mb-[5px]'>
-                  <b className='text-gold'>New Venture:</b> Pune, 2023
+                  <b className='text-gold'>New Venture:</b> vesma,surat
                 </p>
               </div>
 
