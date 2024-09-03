@@ -1,5 +1,5 @@
 import React from 'react';
-import { logo } from '../Images/Images';
+import {  logo2 } from '../Images/Images';
 import { NavLink, Link } from 'react-router-dom';
 
 const Footer = () => {
@@ -66,7 +66,7 @@ const Footer = () => {
                 <div className='flex flex-col lg:flex-row justify-between gap-[25px] lg:gap-0'>
                     <div className='lg:w-[30%]'>
                         <div>
-                            <img src={logo} className='lg:w-[300px] w-[250px]' />
+                            <img src={logo2} className='lg:w-[300px] w-[250px]' />
                         </div>
                         <div className='mt-[15px]'>
                             <p className='text-[15px] text-white'>Our vision is to lead the way in sustainable farming and to continue expanding our portfolio of nature products. We aim to promote health and well-being through our organic offerings, supporting both our customers and the environment.</p>
