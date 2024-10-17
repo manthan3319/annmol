@@ -43,7 +43,7 @@ const Home_Contactus = () => {
             'k7Tuz-KeXhiz3LAhq' // Replace with your EmailJS user ID
         )
         .then((result) => {
-            alert('Message sent successfully!');
+            alert('Message sent successfully!!');
         }, (error) => {
             console.error('Failed to send message', error);
             alert('Failed to send message, please try again.');
