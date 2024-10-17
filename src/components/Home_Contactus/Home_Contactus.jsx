@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Title } from '../Function/Function';
 import { useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import emailjs from 'emailjs-com';
 
 const Home_Contactus = () => {
     const location = useLocation();
@@ -18,6 +19,37 @@ const Home_Contactus = () => {
         visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
     };
 
+    // Handle form submission
+    const [formData, setFormData] = useState({
+        Name: '',
+        Email: '',
+        Number: '',
+        Subject: '',
+        Message: ''
+    });
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData((prevState) => ({ ...prevState, [name]: value }));
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        emailjs.send(
+            'service_fe62azb', // Replace with your EmailJS service ID
+            'template_7okw9gf', // Replace with your EmailJS template ID
+            formData, // Send the form data as parameters
+            'k7Tuz-KeXhiz3LAhq' // Replace with your EmailJS user ID
+        )
+        .then((result) => {
+            alert('Message sent successfully!');
+        }, (error) => {
+            console.error('Failed to send message', error);
+            alert('Failed to send message, please try again.');
+        });
+    };
+
     return (
         <motion.div
             ref={sectionRef}
@@ -26,39 +58,13 @@ const Home_Contactus = () => {
             variants={fadeInVariants}
             className={` ${iscontactus ? "py-[100px]" : "py-[50px]"}`}
         >
-
-
             <div className='lg:max-w-[1440px] m-auto px-[20px]'>
-                <div>
-                    <div className='text-center'>
-                        <Title name="Contact Us" color="#74C264" />
-                    </div>
+                <div className='text-center'>
+                    <Title name="Contact Us" color="#74C264" />
+                </div>
 
-                    <div className='flex md:justify-between flex-wrap mt-[50px] items-center justify-center gap-[15px]'>
-                        <motion.div
-                            className='items-center flex flex-col bg-green p-[20px] rounded-[15px] w-[300px] h-[150px] overflow-hidden'
-                            variants={fadeInVariants}
-                        >
-                            <p className='text-[30px] mb-[10px] text-gold'><i className="fa fa-phone" aria-hidden="true"></i></p>
-                            <p className='font-ubuntu text-[20px] text-white'>+91 7043253295</p>
-                        </motion.div>
-
-                        <motion.div
-                            className='items-center flex flex-col bg-green p-[20px] rounded-[15px] w-[300px] h-[150px] overflow-hidden'
-                            variants={fadeInVariants}
-                        >
-                            <p className='text-[30px] mb-[10px] text-gold'><i className="fa fa-envelope" aria-hidden="true"></i></p>
-                            <p className='font-ubuntu text-[20px] text-white'>shahraj.1432001@gmail.com</p>
-                        </motion.div>
-
-                        <motion.div
-                            className='items-center flex flex-col bg-green p-[20px] rounded-[15px] w-[300px] h-[150px] overflow-hidden'
-                            variants={fadeInVariants}
-                        >
-                            <p className='text-[30px] mb-[10px] text-gold'><i className="fa fa-map-marker" aria-hidden="true"></i></p>
-                            <p className='font-ubuntu text-[20px] text-white'>vesma,surat</p>
-                        </motion.div>
-                    </div>
+                <div className='flex md:justify-between flex-wrap mt-[50px] items-center justify-center gap-[15px]'>
+                    {/* Contact Information */}
                 </div>
 
                 <div className='mt-[80px]'>
@@ -66,7 +72,8 @@ const Home_Contactus = () => {
                         <Title name="Drop Us A Message For Any Query" color="#74C264" />
                     </div>
 
-                    <motion.div
+                    <motion.form
+                        onSubmit={handleSubmit}
                         className='mt-[50px] bg-[#d7ac442b] p-[40px] rounded-[15px]'
                         variants={fadeInVariants}
                     >
@@ -76,6 +83,8 @@ const Home_Contactus = () => {
                                 placeholder='Name'
                                 name='Name'
                                 className='w-[100%] p-[15px] outline-none bg-transparent text-black border-b-[1px] border-green placeholdercustom'
+                                onChange={handleChange}
+                                value={formData.Name}
                             />
 
                             <input
@@ -83,6 +92,8 @@ const Home_Contactus = () => {
                                 placeholder='Email'
                                 name='Email'
                                 className='w-[100%] p-[15px] outline-none bg-transparent text-black border-b-[1px] border-green placeholdercustom'
+                                onChange={handleChange}
+                                value={formData.Email}
                             />
                         </div>
 
@@ -92,6 +103,8 @@ const Home_Contactus = () => {
                                 placeholder='Number'
                                 name='Number'
                                 className='w-[100%] p-[15px] outline-none bg-transparent text-black border-b-[1px] border-green placeholdercustom'
+                                onChange={handleChange}
+                                value={formData.Number}
                             />
 
                             <input
@@ -99,6 +112,8 @@ const Home_Contactus = () => {
                                 placeholder='Subject'
                                 name='Subject'
                                 className='w-[100%] p-[15px] outline-none bg-transparent text-black border-b-[1px] border-green placeholdercustom'
+                                onChange={handleChange}
+                                value={formData.Subject}
                             />
                         </div>
 
@@ -106,8 +121,11 @@ const Home_Contactus = () => {
                             <textarea
                                 className='w-[100%] p-[15px] outline-none bg-transparent text-black border-b-[1px] border-green placeholdercustom'
                                 placeholder='Your Message'
+                                name='Message'
                                 cols={25}
                                 rows={8}
+                                onChange={handleChange}
+                                value={formData.Message}
                             />
                         </div>
 
@@ -116,13 +134,11 @@ const Home_Contactus = () => {
                                 Submit
                             </button>
                         </div>
-                    </motion.div>
+                    </motion.form>
                 </div>
             </div>
-
-           
         </motion.div>
     );
-}
+};
 
 export default Home_Contactus;
