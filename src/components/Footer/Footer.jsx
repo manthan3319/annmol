@@ -24,6 +24,11 @@ const Footer = () => {
             name: "Gallery",
             link: "/gallery"
         },
+        {
+            id: 5,
+            name: "E visiting Card ",
+            link: "/ecard"
+        },
     ];
 
     const ourproduct = [
@@ -57,6 +62,7 @@ const Footer = () => {
             name: "Whole Peanuts",
             link: "/product"
         },
+        
 
     ];
 
