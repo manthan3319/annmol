@@ -16,6 +16,7 @@ const Navbar = () => {
         { id: 2, name: 'About Us', link: '/aboutus' },
         { id: 3, name: 'Product', link: '/product' },
         { id: 4, name: 'Gallery', link: '/gallery' },
+        { id: 5, name: 'E visiting Card ', link: '/ecard' },
     ];
 
     const handleLinkClick = () => {
@@ -32,7 +33,7 @@ const Navbar = () => {
                         </div>
                         <div>
                             <nav>
-                                <ul className='flex xl:gap-[50px]'>
+                                <ul className='flex xl:gap-[20px]'>
                                     {NavbarMenu.map((item) => (
                                         <li key={item.id}>
                                             <NavLink

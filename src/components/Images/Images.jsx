@@ -27,7 +27,12 @@ import menu from "../Images/menu.png";
 import wheatbg from "../Images/img_2.jpg";
 import bg2 from "../Images/img_1.jpg";
 import bg3 from "../Images/bg3.jpg";
+import ecard from "../Images/e-card.jpg";
+import rectengal from "../Images/rectengal.png";
+
 export {
+    rectengal,
+    ecard,
     logo,
     logo2,
     marcha_bg,
